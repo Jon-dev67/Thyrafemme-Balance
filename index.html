@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyrafemme Balance | Hormonal & Thyroid Support Formula</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #a67c52;
+            --primary-dark: #8c6b46;
+            --primary-light: #bf9d7a;
+            --accent-color: #7d5c3d;
+            --text-color: #4a4a4a;
+            --light-bg: #f9f7f3;
+            --border-color: #e8e1d7;
+            --white: #ffffff;
+            --beige-light: #f5f1eb;
+            --beige-medium: #e8e1d7;
+            --shadow: 0 5px 15px rgba(166, 124, 82, 0.1);
+            --shadow-hover: 0 8px 20px rgba(166, 124, 82, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text-color);
+            text-align: center;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--beige-light) 100%);
+            padding: 50px 20px;
+            color: var(--accent-color);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid var(--border-color);
+        }
+        
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary-color), var(--primary-dark));
+        }
+        
+        .product-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+        
+        .tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 500;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--primary-dark);
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .product-section {
+            padding: 60px 0 40px;
+        }
+        
+        .product-image {
+            max-width: 420px;
+            width: 100%;
+            margin: 0 auto 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(166, 124, 82, 0.15);
+            transition: transform 0.4s ease;
+            display: block;
+            border: 8px solid var(--beige-light);
+            background-color: var(--beige-light);
+        }
+        
+        .product-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .benefit-card {
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 30px 20px;
+            flex: 1 1 250px;
+            max-width: 280px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-light);
+        }
+        
+        .benefit-icon {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .benefit-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(166, 124, 82, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 30px 0 40px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(to right, var(--primary-dark), var(--accent-color));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(166, 124, 82, 0.6);
+        }
+        
+        .btn-small {
+            padding: 15px 35px;
+            font-size: 1rem;
+            margin: 20px 0;
+        }
+        
+        .features {
+            background-color: var(--light-bg);
+            padding: 60px 20px;
+            border-radius: 15px;
+            margin: 50px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary-dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .ingredients-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .ingredient-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .ingredient-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .ingredient-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ingredient-name::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .symptoms-list {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px auto;
+            text-align: left;
+            max-width: 800px;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .symptoms-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        .symptoms-icon {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .symptoms-list ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .symptoms-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            position: relative;
+        }
+        
+        .symptoms-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -15px;
+            top: -2px;
+        }
+        
+        .usage-info {
+            background-color: var(--beige-light);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px dashed var(--primary-light);
+        }
+        
+        .usage-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .usage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .certifications {
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: block;
+            border: 1px solid var(--border-color);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--beige-light) 100%);
+            padding: 30px 20px;
+            margin-top: 60px;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            border-top: 3px solid var(--border-color);
+        }
+        
+        .disclaimer {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        .cta-section {
+            background: linear-gradient(to bottom, var(--light-bg), var(--beige-light));
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid var(--primary-light);
+        }
+        
+        .guarantee {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .risk-free {
+            background: linear-gradient(to right, #f9f7f3, #f5f1eb);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+            border: 2px solid var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .product-name {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .benefit-card {
+                max-width: 100%;
+            }
+            
+            .btn {
+                padding: 18px 35px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="product-name">Thyrafemme Balance</h1>
+            <p class="tagline">Advanced Hormonal & Thyroid Support • <span class="highlight">Feel the Difference with Smart Nutrition</span></p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="product-section">
+            <!-- Product image - replace with actual path -->
+            <img src="Thyrafemme Balance.jpg" alt="Thyrafemme Balance Hormonal Support Supplement" class="product-image">
+            
+            <a href="https://getthyrafemme.cc/dtc/#aff=jonathan2026" class="btn">VISIT OFFICIAL WEBSITE</a>
+            
+            <div class="symptoms-list">
+                <h2 class="symptoms-title"><span class="symptoms-icon">⚠️</span> Signs of Hormonal & Thyroid Imbalance</h2>
+                <ul>
+                    <li><strong>Persistent fatigue</strong> and low energy levels</li>
+                    <li><strong>Brain fog</strong> and difficulty concentrating</li>
+                    <li><strong>Mood swings</strong> and irritability</li>
+                    <li><strong>Unexplained weight changes</strong> and difficulty managing weight</li>
+                    <li><strong>Dull hair and skin</strong>, brittle nails</li>
+                    <li><strong>Sleep problems</strong> and low stress tolerance</li>
+                </ul>
+            </div>
+            
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚖️</div>
+                    <h3 class="benefit-title">Hormonal Balance</h3>
+                    <p>Supports thyroid hormone regulation and promotes endocrine system balance for women.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3 class="benefit-title">Increased Energy</h3>
+                    <p>Combats chronic fatigue and naturally boosts energy levels throughout the day.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3 class="benefit-title">Mental Clarity</h3>
+                    <p>Reduces brain fog and improves focus, concentration, and memory function.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3 class="benefit-title">Natural Ingredients</h3>
+                    <p>Formulated with essential nutrients and scientifically-backed adaptogens.</p>
+                </div>
+            </div>
+            
+            <div class="risk-free">
+                <p><strong>🔒 100% RISK-FREE TRIAL • 🚚 FREE SHIPPING • 💯 SATISFACTION GUARANTEE</strong></p>
+            </div>
+            
+            <div class="features">
+                <h2 class="section-title">Advanced Balance Formula</h2>
+                <p>Thyrafemme Balance combines vitamins, minerals, amino acids, and adaptogens to provide comprehensive support for hormonal and thyroid health.</p>
+                
+                <div class="ingredients-container">
+                    <div class="ingredient-card">
+                        <h3 class="ingredient-name">Iodine (Seaweed)</h3>
+                        <p>Essential for thyroid hormone production. Sourced naturally from seaweed and fucus.</p>
+                    </div>
+                    
+                    <div class="ingredient-card">
+                        <h3 class="ingredient-name">L-Tyrosine</h3>
+                        <p>Amino acid precursor to thyroid hormones, fundamental for their synthesis and proper function.</p>
+                    </div>
+                    
+                    <div class="ingredient-card">
+                        <h3 class="ingredient-name">Zinc & Selenium</h3>
+                        <p>Minerals that assist in converting thyroid hormones to their active form and provide antioxidant support.</p>
+                    </div>
+                    
+                    <div class="ingredient-card">
+                        <h3 class="ingredient-name">Vitamins B6 & B12</h3>
+                        <p>Support red blood cell production, energy metabolism, and neurological clarity.</p>
+                    </div>
+                    
+                    <div class="ingredient-card">
+                        <h3 class="ingredient-name">Magnesium</h3>
+                        <p>Versatile mineral that aids nerve function, muscle relaxation, and stress response.</p>
+                    </div>
+                    
+                    <div class="ingredient-card">
+                        <h3 class="ingredient-name">Ashwagandha & Schisandra</h3>
+                        <p>Adaptogens that help the body manage stress and promote natural hormonal balance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-info">
+                <div class="usage-icon">💊</div>
+                <h3 class="usage-title">How to Use Thyrafemme Balance</h3>
+                <p><strong>Recommended dose:</strong> 1 capsule daily with a meal.</p>
+                <p><strong>Best time:</strong> Morning or early afternoon for optimal nutrient absorption.</p>
+                <p><strong>Consistency is key:</strong> Use daily for best results and hormonal balance support.</p>
+            </div>
+            
+            <!-- Certifications image - replace with actual path -->
+            <img src="Thyrafemme Balance-2.jpg" alt="Thyrafemme Balance Certifications" class="certifications">
+            
+            <div class="cta-section">
+                <h2 class="section-title">Transform Your Hormonal Health</h2>
+                <p class="guarantee">Experience the balance your body deserves with a formula specifically developed for women's hormonal needs.</p>
+                <a href="https://getthyrafemme.cc/dtc/#aff=jonathan2026" class="btn btn-small">GET MY HORMONAL BALANCE NOW</a>
+                <p style="font-size: 0.9rem; margin-top: 15px;">Ships to All 50 States • 100% Secure Checkout • Satisfaction Guaranteed</p>
+            </div>
+            
+            <a href="https://getthyrafemme.cc/dtc/#aff=jonathan2026" class="btn">VISIT OFFICIAL WEBSITE WITH SPECIAL OFFER</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>© 2023 Thyrafemme Balance. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
